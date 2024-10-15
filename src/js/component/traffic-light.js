@@ -44,7 +44,9 @@ const TrafficLight = () => {
                 <div className={`light green  ${color == "green" ? "selected" : ""}`}
                     onClick={() => changeColor("green")}>
                 </div>
-                <div className={`${extraLight==="actived"? "light purple":""} ${color === "purple" ? "selected" : ""}`}></div>
+                <div className={`${extraLight==="actived"? "light purple":""} ${color === "purple" ? "selected" : ""}`} 
+                onClick={() => changeColor("purple")}>
+                                    </div>
             </div>
             <div className="d-flex m-auto justify-content-center">
             <button type="button" className="btn btn-dark  m-2" onClick = {() => clickPurpleChange()} >{active? "Desactivar luz extra" : "Activar luz extra"}</button>
