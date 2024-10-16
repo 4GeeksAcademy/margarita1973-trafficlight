@@ -3,6 +3,8 @@ import React, { useState, } from "react";
 
 const TrafficLight = () => {
     const [color, setColor] = useState("red");
+    const [active, setActive]=useState(false)
+    const [extraLight,setExtraLight] = useState("desactived")
 
     const changeColor = (selectedcolor) => {
         setColor(selectedcolor)
@@ -14,10 +16,7 @@ const TrafficLight = () => {
         else if (color == "purple"){return setColor("red")}
         else { return setColor ("red")}
     }
-    const [active, setActive]=useState(false)
-  
-    const [extraLight,setExtraLight] = useState("desactived")
-   
+        
     const clickPurpleChange=()=> {
             if (active===false){
            setExtraLight ("actived")
